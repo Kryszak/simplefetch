@@ -20,7 +20,7 @@ mod environment_information_extractor_test {
     #[test]
     fn should_return_error_if_variable_is_not_set() {
         // given
-        let variable_name = "TEST_VAR_FOR_FETCHER";
+        let variable_name = "I_AM_NOT_PRESENT";
 
         // when
         let result = EnvironmentInformationExtractor::get_variable(variable_name);
