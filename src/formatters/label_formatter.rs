@@ -1,6 +1,6 @@
 use colored::{ColoredString, Colorize};
 
-use crate::settings::settings::FormattingStyle;
+use crate::settings::print_settings::FormattingStyle;
 
 use super::Formatter;
 
@@ -11,14 +11,14 @@ pub struct LabelFormatter {
 
 impl LabelFormatter {
     pub fn new(label_padding: usize, style: FormattingStyle) -> Self {
-        return LabelFormatter {
+        LabelFormatter {
             label_padding,
             style,
-        };
+        }
     }
 
     fn get_padded_section_name(&self, section_name: String) -> ColoredString {
-        return match self.style {
+        match self.style {
             FormattingStyle::Left => format!(
                 "{section_name:<padding_length$}:",
                 section_name = section_name,
@@ -31,7 +31,7 @@ impl LabelFormatter {
             ),
         }
         .bright_cyan()
-        .bold();
+        .bold()
     }
 }
 

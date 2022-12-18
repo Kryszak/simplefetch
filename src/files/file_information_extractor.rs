@@ -9,7 +9,7 @@ impl FileInformationExtractor {
             .ok()
             .as_deref()
             .and_then(|content| regex.captures(content))
-            .and_then(|capture| capture.name(capture_group))
+            .and_then(|captures| captures.name(capture_group))
             .map(|matched| String::from(matched.as_str()));
     }
 }

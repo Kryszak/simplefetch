@@ -1,16 +1,16 @@
 use argparse::FromCommandLine;
 
-pub struct Settings {
+pub struct PrintSettings {
     pub label_padding: usize,
     pub style: FormattingStyle,
 }
 
-impl Settings {
+impl PrintSettings {
     pub fn new(label_padding: usize, style: FormattingStyle) -> Self {
-        return Settings {
+        PrintSettings {
             label_padding,
             style,
-        };
+        }
     }
 }
 

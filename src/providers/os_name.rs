@@ -10,11 +10,11 @@ impl OsInformation for OsName {
         let os_name_regex =
             Regex::new(format!("PRETTY_NAME=\"(?P<{}>.*)\"", capture_group_name).as_str()).unwrap();
 
-        return FileInformationExtractor::get_information(
+        FileInformationExtractor::get_information(
             "/etc/os-release",
             os_name_regex,
             capture_group_name,
-        );
+        )
     }
 
     fn label() -> String {

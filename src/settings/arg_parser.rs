@@ -1,11 +1,11 @@
-use super::settings::{FormattingStyle::Right, Settings};
+use super::print_settings::{FormattingStyle::Right, PrintSettings};
 use argparse::{ArgumentParser, Parse, Store};
 
 pub struct ArgParser {}
 
 impl ArgParser {
-    pub fn parse_settings() -> Settings {
-        let mut settings = Settings::new(10, Right);
+    pub fn parse_settings() -> PrintSettings {
+        let mut settings = PrintSettings::new(9, Right);
         {
             let mut ap = ArgumentParser::new();
             ap.set_description("Simple Linux system information fetcher.");
@@ -21,7 +21,6 @@ impl ArgParser {
             );
             ap.parse_args_or_exit();
         }
-
-        return settings;
+        settings
     }
 }

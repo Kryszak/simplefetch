@@ -17,7 +17,6 @@ fn main() {
             .map(|info| formatter.format_information(OsInstallationDate::label(), info)),
     ]
     .into_iter()
-    .filter(|info| info.is_some())
-    .map(|info| info.unwrap())
+    .flatten()
     .for_each(|info| println!("{}", info));
 }

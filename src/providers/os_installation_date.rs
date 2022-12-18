@@ -6,11 +6,11 @@ pub struct OsInstallationDate {}
 
 impl OsInformation for OsInstallationDate {
     fn get() -> Option<String> {
-        return fs::metadata("/")
+        fs::metadata("/")
             .and_then(|m| m.created())
             .map(|created| -> DateTime<Local> { DateTime::from(created) })
             .map(|date| format!("{}", date))
-            .ok();
+            .ok()
     }
 
     fn label() -> String {

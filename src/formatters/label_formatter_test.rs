@@ -15,7 +15,7 @@ mod label_formatter_test {
 
         // then
         assert_eq!(
-            format!("{} Arch Linux", " OS:".bright_cyan().bold().to_string()),
+            format!("{} Arch Linux", " OS:".bright_cyan().bold()),
             result
         );
     }
@@ -30,7 +30,7 @@ mod label_formatter_test {
 
         // then
         assert_eq!(
-            format!("{} Arch Linux", "OS :".bright_cyan().bold().to_string()),
+            format!("{} Arch Linux", "OS :".bright_cyan().bold()),
             result
         );
     }
