@@ -24,7 +24,7 @@ impl FromCommandLine for FormattingStyle {
         match s {
             "right" => Ok(FormattingStyle::Right),
             "left" => Ok(FormattingStyle::Left),
-            _ => Err(String::from("Allowed values: left, right"))
+            _ => Err(String::from("Allowed values: left, right")),
         }
     }
 }
