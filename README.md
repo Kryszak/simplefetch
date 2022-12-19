@@ -5,9 +5,9 @@
 Simple fetch tool for Linux OS
 
 ## Example
-[Left-justified](./examples/style_left.png)
-[Right-justified](./examples/style_right.png)
-[Icons](./examples/style_icon.png)
+![Left-justified](./examples/style_left.png)
+![Right-justified](./examples/style_right.png)
+![Icons](./examples/style_icon.png)
 
 ## Usage
 ```
