@@ -5,8 +5,11 @@
 Simple fetch tool for Linux OS
 
 ## Example
+### Justified labels to the left
 ![Left-justified](./examples/style_left.png)
+### Justified labels to the right
 ![Right-justified](./examples/style_right.png)
+### Icons instead of labels
 ![Icons](./examples/style_icon.png)
 
 ## Usage
