@@ -24,7 +24,7 @@ Optional arguments:
   -h,--help             Show this help message and exit
   --label-padding LABEL_PADDING
                         Padding of section labels
-  --style STYLE         Style of display. Available: left,right
+  --style STYLE         Style of display. Available: left,right,icon
 ```
 
 ## Options
