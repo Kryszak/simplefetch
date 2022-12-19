@@ -29,6 +29,7 @@ impl LabelFormatter {
                 section_name = section_name,
                 padding_length = self.label_padding
             ),
+            FormattingStyle::Icon => panic!("Icon style is not supported with labels!"),
         }
         .bright_cyan()
         .bold()
@@ -36,11 +37,7 @@ impl LabelFormatter {
 }
 
 impl Formatter for LabelFormatter {
-    fn format_information(&self, section_name: String, information: String) -> String {
-        format!(
-            "{} {}",
-            self.get_padded_section_name(section_name),
-            information
-        )
+    fn format_information(&self, _: String, label: String, information: String) -> String {
+        format!("{} {}", self.get_padded_section_name(label), information)
     }
 }

@@ -17,6 +17,7 @@ impl PrintSettings {
 pub enum FormattingStyle {
     Left,
     Right,
+    Icon
 }
 
 impl FromCommandLine for FormattingStyle {
@@ -24,7 +25,8 @@ impl FromCommandLine for FormattingStyle {
         match s {
             "right" => Ok(FormattingStyle::Right),
             "left" => Ok(FormattingStyle::Left),
-            _ => Err(String::from("Allowed values: left, right")),
+            "icon" => Ok(FormattingStyle::Icon),
+            _ => Err(String::from("Allowed values: left, right, icon")),
         }
     }
 }

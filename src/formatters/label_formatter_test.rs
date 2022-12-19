@@ -11,7 +11,11 @@ mod label_formatter_test {
         let formatter = LabelFormatter::new(3, Right);
 
         // when
-        let result = formatter.format_information(String::from("OS"), String::from("Arch Linux"));
+        let result = formatter.format_information(
+            String::new(),
+            String::from("OS"),
+            String::from("Arch Linux"),
+        );
 
         // then
         assert_eq!(
@@ -26,7 +30,11 @@ mod label_formatter_test {
         let formatter = LabelFormatter::new(3, Left);
 
         // when
-        let result = formatter.format_information(String::from("OS"), String::from("Arch Linux"));
+        let result = formatter.format_information(
+            String::new(),
+            String::from("OS"),
+            String::from("Arch Linux"),
+        );
 
         // then
         assert_eq!(

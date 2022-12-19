@@ -1,3 +1,3 @@
 pub trait OsInformation {
-    fn get() -> Option<(String, String)>;
+    fn get() -> Option<(String, String, String)>;
 }

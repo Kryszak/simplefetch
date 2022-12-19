@@ -11,10 +11,10 @@ impl OsShell {
 }
 
 impl OsInformation for OsShell {
-    fn get() -> Option<(String, String)> {
+    fn get() -> Option<(String, String, String)> {
         EnvironmentInformationExtractor::get_variable("SHELL")
             .ok()
             .and_then(|shell_path| OsShell::basename(shell_path))
-            .map(|info| (String::from("Shell"), info))
+            .map(|info| (String::from("\u{1F41A}"), String::from("Shell"), info))
     }
 }

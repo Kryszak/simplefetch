@@ -5,12 +5,12 @@ use std::fs;
 pub struct OsInstallationDate {}
 
 impl OsInformation for OsInstallationDate {
-    fn get() -> Option<(String, String)> {
+    fn get() -> Option<(String, String, String)> {
         fs::metadata("/")
             .and_then(|m| m.created())
             .map(|created| -> DateTime<Local> { DateTime::from(created) })
             .map(|date| format!("{}", date))
             .ok()
-            .map(|info| (String::from("Installed"), info))
+            .map(|info| (String::from("\u{1F680}"), String::from("Installed"), info))
     }
 }
