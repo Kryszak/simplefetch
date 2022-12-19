@@ -6,6 +6,7 @@ mod settings;
 
 use crate::formatters::{Formatter, LabelFormatter};
 use crate::providers::{OsInformation, OsInstallationDate, OsName, OsWm};
+use providers::{OsKernelVersion, OsShell, OsTerminal};
 use settings::ArgParser;
 
 fn main() {
@@ -13,12 +14,16 @@ fn main() {
     let formatter = LabelFormatter::new(settings.label_padding, settings.style);
     let formatting_clojure = |(label, info)| formatter.format_information(label, info);
 
-    vec![
-        OsName::get().map(formatting_clojure),
-        OsInstallationDate::get().map(formatting_clojure),
-        OsWm::get().map(formatting_clojure),
+    [
+        OsName::get(),
+        OsKernelVersion::get(),
+        OsInstallationDate::get(),
+        OsWm::get(),
+        OsShell::get(),
+        OsTerminal::get(),
     ]
     .into_iter()
     .flatten()
+    .map(formatting_clojure)
     .for_each(|info| println!("{}", info));
 }
