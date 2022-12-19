@@ -8,5 +8,3 @@ pub(crate) use icon_formatter::IconFormatter;
 
 #[cfg(test)]
 mod label_formatter_test;
-#[cfg(test)]
-mod icon_formatter_test;
