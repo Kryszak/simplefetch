@@ -1,4 +1,7 @@
 # simplefetch
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0d8ca215a3374d4383452d0f6a7efcc3)](https://app.codacy.com/gh/Kryszak/simplefetch?utm_source=github.com&utm_medium=referral&utm_content=Kryszak/simplefetch&utm_campaign=Badge_Grade_Settings)
+
 Simple fetch tool for Linux OS
 
 ## Usage
