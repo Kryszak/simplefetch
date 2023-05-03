@@ -1,4 +1,4 @@
-name: Test
+name: CI
 
 on: [push]
 
@@ -11,6 +11,15 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+          components: clippy
+          override: true
+      - name: Prepare cache
+        uses: Swatinem/rust-cache@v2
       - uses: actions-rs/cargo@v1
         with:
           command: test
+      - name: Check with Clippy
+        uses: actions-rs/cargo@v1
+        with:
+          command: clippy
+          args: -- -D warnings
