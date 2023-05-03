@@ -17,7 +17,7 @@ impl PrintSettings {
 pub enum FormattingStyle {
     Left,
     Right,
-    Icon
+    Icon,
 }
 
 impl FromCommandLine for FormattingStyle {
