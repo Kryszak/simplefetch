@@ -8,5 +8,5 @@ edition = "2021"
 [dependencies]
 colored = "2.0.0"
 regex = "1"
-chrono = {version = "0.4.24", features = ["clock"]}
+chrono = {version = "0.4.26", features = ["clock"]}
 argparse = "0.2.2"
