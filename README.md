@@ -1,5 +1,4 @@
 ![Build Status](https://github.com/Kryszak/simplefetch/actions/workflows/test.yml/badge.svg)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/434b82531d904a0a8289edb0c5e3af46)](https://app.codacy.com/gh/Kryszak/simplefetch/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 # simplefetch
 Simple fetch tool for Linux OS
