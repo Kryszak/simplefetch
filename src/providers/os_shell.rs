@@ -6,7 +6,7 @@ pub struct OsShell {}
 
 impl OsShell {
     fn basename(path: String) -> Option<String> {
-        path.split('/').last().map(String::from)
+        path.split('/').next_back().map(String::from)
     }
 }
 
