@@ -12,7 +12,9 @@ jobs:
         uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           components: clippy
+      - name: Prepare just
+        uses: extractions/setup-just@v3
       - name: Run tests
-        run: cargo test
+        run: just test
       - name: Check with Clippy
-        run: cargo clippy -- -D warnings
+        run: just lint
