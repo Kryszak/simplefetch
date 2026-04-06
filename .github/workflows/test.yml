@@ -13,7 +13,7 @@ jobs:
         with:
           components: clippy
       - name: Prepare just
-        uses: extractions/setup-just@v3
+        uses: extractions/setup-just@v4
       - name: Run tests
         run: just test
       - name: Check with Clippy
